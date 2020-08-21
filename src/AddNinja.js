@@ -12,11 +12,12 @@ class AddNinja extends Component {
     }
     handleSubmit = (e) => {
         e.preventDefault()
+        console.log(this.state)
     }
     render () {
         return(
           <div>
-              <form onSubmit={}>
+              <form onSubmit={ this.handleSubmit }>
                   <label htmlFor="name">Name:</label>
                   <input type="text" id="name" onChange={this.handleChange}/>
 
