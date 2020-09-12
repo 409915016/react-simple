@@ -1,12 +1,17 @@
-import React, {Component} from 'react'
-class App extends Component {
-    render () {
-        return (
-          <div className="App">
-              hello world
-          </div>
-        );
-    }
+import React from 'react'
+import BookList from './components/BookList'
+import Navbar from './components/Navbar'
+import BookContextProvider from './contexts/BookContext'
+
+const App = () =>{
+    return (
+        <div className="App">
+            <BookContextProvider>
+                <Navbar />
+                <BookList />
+            </BookContextProvider>
+        </div>
+      );
 }
 
 export default App;
